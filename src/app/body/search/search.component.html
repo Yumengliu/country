@@ -1,11 +1,11 @@
 <div class="search">
   <div class="search-input-area">
-    <app-search-input></app-search-input>
+    <app-search-input (filterName)="searchList.updateByName($event)"></app-search-input>
     <span class="spacer"></span>
-    <app-search-filter></app-search-filter>
+    <app-search-filter (regionChanged)="searchList.updateByRegion($event)"></app-search-filter>
   </div>
 
   <div>
-    <app-search-list></app-search-list>
+    <app-search-list #searchList></app-search-list>
   </div>
 </div>

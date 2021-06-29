@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CountryService } from 'src/app/country.service';
+import { CountryList } from 'src/app/data/country-list';
 
 @Component({
   selector: 'app-search-list',
@@ -7,12 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchListComponent implements OnInit {
 
-  countries = [
-    1, 2, 3, 4, 5, 6, 7, 8
-  ]
-  constructor() { }
+  countries: Array<CountryList> = [];
 
-  ngOnInit(): void {
+  constructor(private countryService: CountryService) {
   }
 
+  ngOnInit(): void {
+    this.countryService.getAllCountries().subscribe(data => this.countries = data);
+  }
+
+  updateByName(name: string) {
+    this.countryService.getCountriesByNameFilter(name).subscribe(data => this.countries = data);
+  }
+
+  updateByRegion(region: string) {
+    this.countryService.getCountriesByRegion(region).subscribe(data => this.countries = data);
+  }
 }

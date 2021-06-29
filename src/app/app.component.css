@@ -1,0 +1,8 @@
+.app div{
+  width: 1440px;
+}
+
+.app {
+  display: flex;
+  justify-content: center;
+}

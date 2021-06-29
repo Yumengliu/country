@@ -17,6 +17,10 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { SearchItemComponent } from './body/search/search-item/search-item.component';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { CountryCardComponent } from './body/search/country-card/country-card.component';
+import { MatCardModule } from '@angular/material/card';
+import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -28,7 +32,8 @@ import { MatGridListModule } from '@angular/material/grid-list';
     SearchInputComponent,
     SearchFilterComponent,
     SearchListComponent,
-    SearchItemComponent
+    SearchItemComponent,
+    CountryCardComponent
   ],
   imports: [
     BrowserModule,
@@ -39,6 +44,9 @@ import { MatGridListModule } from '@angular/material/grid-list';
     MatInputModule,
     MatSelectModule,
     MatGridListModule,
+    MatCardModule,
+    HttpClientModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

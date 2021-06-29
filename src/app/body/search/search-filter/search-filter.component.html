@@ -1,6 +1,6 @@
 <mat-form-field color="primary" appearance="outline">
   <mat-label>Filter by Region</mat-label>
-  <mat-select>
+  <mat-select [formControl]="region">
     <mat-option *ngFor="let region of regions" [value]="region">
       {{region}}
     </mat-option>

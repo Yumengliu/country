@@ -1,0 +1,13 @@
+mat-card {
+  padding: 0 0;
+  overflow: hidden;
+}
+
+mat-card img {
+  width: 264px;
+  height: 160px;
+}
+
+mat-card-content {
+  padding: 25px;
+}
