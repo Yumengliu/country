@@ -5,7 +5,7 @@ import { SearchComponent } from './body/search/search.component';
 
 const routes: Routes = [
   { path: "search", component: SearchComponent },
-  { path: "detail", component: DetailComponent },
+  { path: "detail/:code", component: DetailComponent },
   { path: "", component: SearchComponent },
 ];
 

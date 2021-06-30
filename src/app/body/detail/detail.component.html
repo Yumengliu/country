@@ -1,1 +1,35 @@
-<p>detail works!</p>
+<div id="full">
+  <div id="control">
+    <button mat-flat-button color="primary" (click)="goBack()">
+      <mat-icon>arrow_back</mat-icon>Back
+    </button>
+  </div>
+  <div id="detail">
+    <div id="flag">
+      <img [src]="country.flag">
+    </div>
+    <div id="info">
+      <span>
+        <h1>{{country.name}}</h1>
+      </span>
+      <div id="basic">
+        <div id="basic-left">
+          <p><b>Native Name:</b> {{country.nativeName}}</p>
+          <p><b>Population:</b> {{country.population | number}}</p>
+          <p><b>Region:</b> {{country.region}}</p>
+          <p><b>Sub Region:</b> {{country.subregion}}</p>
+          <p><b>Capital:</b> {{country.capital}}</p>
+        </div>
+        <div id="basic-right">
+          <p><b>Top Level Domain:</b> {{country.topLevelDomain}}</p>
+          <p><b>Currencies:</b> {{getCurrencies()}}</p>
+          <p><b>Languages:</b> {{getLanguages()}}</p>
+        </div>
+      </div>
+      <div id="border">
+        <p><b>Border Countries:</b> <button mat-stroked-button *ngFor="let nc of country.borders"
+            [routerLink]="['/detail', nc]">{{nc | countryName}}</button></p>
+      </div>
+    </div>
+  </div>
+</div>

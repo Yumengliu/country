@@ -1,5 +1,5 @@
 <mat-grid-list cols="4" gutterSize="70px" rowHeight="264:335">
   <mat-grid-tile *ngFor="let c of countries">
-    <app-country-card [country]="c"></app-country-card>
+    <app-country-card [country]="c" [routerLink]="['/detail', c.alpha3Code]"></app-country-card>
   </mat-grid-tile>
 </mat-grid-list>

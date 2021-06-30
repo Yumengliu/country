@@ -21,6 +21,8 @@ import { CountryCardComponent } from './body/search/country-card/country-card.co
 import { MatCardModule } from '@angular/material/card';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+import { MatButtonModule } from '@angular/material/button';
+import { CountryNamePipe } from './data/country-name.pipe';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     SearchFilterComponent,
     SearchListComponent,
     SearchItemComponent,
-    CountryCardComponent
+    CountryCardComponent,
+    CountryNamePipe
   ],
   imports: [
     BrowserModule,
@@ -47,6 +50,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatCardModule,
     HttpClientModule,
     ReactiveFormsModule,
+    MatButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

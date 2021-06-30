@@ -1,0 +1,51 @@
+#full {
+  display: flex;
+  flex-direction: column;
+}
+
+#detail {
+  display: flex;
+}
+
+#info {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding: 50px 0;
+}
+
+#flag {
+  width: 50%;
+}
+
+#flag img {
+  width: 560px;
+  height: 400px;
+}
+
+#basic {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+}
+
+#control {
+  padding: 80px 0;
+}
+
+#basic-left {
+  width: 50%;
+}
+
+#basic-right {
+  width: 50%;
+}
+
+#border button {
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+
+#border b {
+  margin-right: 15px;
+}
